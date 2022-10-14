@@ -11,12 +11,14 @@ pipeline {
                 }
             }
         }
-        stage("build image") {
+        stage("docker login and build image") {
            
            
             steps {
                 script {
-                    buildImage "REPO NAme:3.00"
+                    buildImage()
+                    dockerLogin()
+                    dockerPush "my image NAME"
                 }
             }
         }
