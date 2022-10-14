@@ -16,7 +16,7 @@ pipeline {
            
             steps {
                 script {
-                    buildImage()
+                    buildImage "REPO NAme:3.00"
                 }
             }
         }
